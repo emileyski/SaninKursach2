@@ -1,0 +1,5 @@
+C:\Users\hnure\Desktop\TicketHelper\x64\Debug\TicketHelper.exe
+C:\Users\hnure\Desktop\TicketHelper\x64\Debug\TicketHelper.vcxproj.AssemblyReference.cache
+C:\Users\hnure\Desktop\TicketHelper\x64\Debug\TicketHelper.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\hnure\Desktop\TicketHelper\x64\Debug\TicketHelper.RegAuthForm.resources
+C:\Users\hnure\Desktop\TicketHelper\x64\Debug\TicketHelper.vcxproj.GenerateResource.cache
