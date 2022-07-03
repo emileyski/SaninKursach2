@@ -103,4 +103,31 @@ public:
 		}
 		return jAccounts.dump();
 	}
+	vector<Admin> GetAdminAccountsVector()
+	{
+		const string fileName = "adminAccounts.json";
+
+		json jAccounts;
+
+		ifstream reader;
+		reader.open(fileName);
+		reader >> jAccounts;
+		reader.close();
+
+		vector<Admin> adminAccounts;
+		
+		int iter = 0;
+
+		for (auto i = jAccounts.begin(); i != jAccounts.end(); ++i, ++iter)
+		{
+			Admin currentAccount;
+			currentAccount.login = jAccounts[iter]["Login"];
+			currentAccount.name = jAccounts[iter]["Name"];
+			currentAccount.password = jAccounts[iter]["Password"];
+
+			adminAccounts.push_back(currentAccount);
+		}
+
+		return adminAccounts;
+	}
 };
