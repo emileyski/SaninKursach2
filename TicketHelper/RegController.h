@@ -74,6 +74,19 @@ public:
 			json x;
 			x["EventName"] = visitor.tickets[i].eventName;
 			x["TheatreName"] = visitor.tickets[i].theatreName;
+
+			x["Date"]["Day"] = visitor.tickets[i].date.day;
+			x["Date"]["Month"] = visitor.tickets[i].date.month;
+			x["Date"]["Year"] = visitor.tickets[i].date.year;
+
+			x["StartTime"]["Hour"] = visitor.tickets[i].startTime.hour;
+			x["StartTime"]["Minute"] = visitor.tickets[i].startTime.minute;
+
+			x["EndTime"]["Hour"] = visitor.tickets[i].endTime.hour;
+			x["EndTime"]["Minute"] = visitor.tickets[i].endTime.minute;
+
+
+			x["PlaceCount"] = visitor.tickets[i].placeCount;
 			jAccount["Tickets"].push_back(x);
 		}
 
@@ -124,10 +137,61 @@ public:
 			currentAccount.login = jAccounts[iter]["Login"];
 			currentAccount.name = jAccounts[iter]["Name"];
 			currentAccount.password = jAccounts[iter]["Password"];
+			currentAccount.surname = jAccounts[iter]["Surname"];
 
 			adminAccounts.push_back(currentAccount);
 		}
 
 		return adminAccounts;
+	}
+	vector<Visitor> GetVisitorAccountsVector()
+	{
+		const string fileName = "visitorAccounts.json";
+
+		json jAccounts;
+
+		ifstream reader;
+		reader.open(fileName);
+		reader >> jAccounts;
+		reader.close();
+
+		vector<Visitor> visitorAccounts;
+
+		int iter = 0;
+
+		for (auto i = jAccounts.begin(); i != jAccounts.end(); ++i, ++iter)
+		{
+			Visitor currentAccount;
+			currentAccount.login = jAccounts[iter]["Login"];
+			currentAccount.name = jAccounts[iter]["Name"];
+			currentAccount.password = jAccounts[iter]["Password"];
+			currentAccount.surname = jAccounts[iter]["Surname"];
+
+			json jEvents = jAccounts[iter]["Tickets"];
+
+
+			int iter2 = 0;
+			for (auto j = jEvents.begin(); j != jEvents.end(); ++j, ++iter2)
+			{
+				Event currentEvent;
+
+				currentEvent.eventName = jEvents[iter2]["EventName"];
+				currentEvent.theatreName = jEvents[iter2]["TheatreName"];
+				currentEvent.placeCount = jEvents[iter2]["PlaceCount"];
+
+				currentEvent.date.day = jEvents[iter2]["Date"]["Day"];
+				currentEvent.date.month = jEvents[iter2]["Date"]["Month"];
+				currentEvent.date.year = jEvents[iter2]["Date"]["Year"];
+
+				currentEvent.startTime.hour = jEvents[iter2]["StartTime"]["Hour"];
+				currentEvent.startTime.minute = jEvents[iter2]["StartTime"]["Minute"];
+
+				currentAccount.tickets.push_back(currentEvent);
+			}
+
+			visitorAccounts.push_back(currentAccount);
+		}
+
+		return visitorAccounts;
 	}
 };

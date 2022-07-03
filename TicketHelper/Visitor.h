@@ -8,6 +8,7 @@ public class Visitor :public Admin
 {
 public:
 	vector<Event> tickets;
+	Visitor(){}
 	Visitor(string name, string surname, string login, string password):Admin(name, surname, login, password)
 	{
 		tickets = vector<Event>(0);
