@@ -3,3 +3,8 @@ C:\Users\hnure\Desktop\TicketHelper\x64\Debug\TicketHelper.vcxproj.AssemblyRefer
 C:\Users\hnure\Desktop\TicketHelper\x64\Debug\TicketHelper.vcxproj.SuggestedBindingRedirects.cache
 C:\Users\hnure\Desktop\TicketHelper\x64\Debug\TicketHelper.RegAuthForm.resources
 C:\Users\hnure\Desktop\TicketHelper\x64\Debug\TicketHelper.vcxproj.GenerateResource.cache
+C:\My files\#Programming\C++\SaninKursach2\TicketHelper\x64\Debug\TicketHelper.vcxproj.AssemblyReference.cache
+C:\My files\#Programming\C++\SaninKursach2\TicketHelper\x64\Debug\TicketHelper.vcxproj.SuggestedBindingRedirects.cache
+C:\My files\#Programming\C++\SaninKursach2\TicketHelper\x64\Debug\TicketHelper.RegAuthForm.resources
+C:\My files\#Programming\C++\SaninKursach2\TicketHelper\x64\Debug\TicketHelper.vcxproj.GenerateResource.cache
+C:\My files\#Programming\C++\SaninKursach2\TicketHelper\x64\Debug\TicketHelper.exe
