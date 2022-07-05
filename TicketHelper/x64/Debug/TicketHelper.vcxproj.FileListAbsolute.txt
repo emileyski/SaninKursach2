@@ -14,3 +14,4 @@ C:\Users\hnure\Documents\SaninKursach3\TicketHelper\x64\Debug\TicketHelper.Admin
 C:\Users\hnure\Documents\SaninKursach3\TicketHelper\x64\Debug\TicketHelper.RegAuthForm.resources
 C:\Users\hnure\Documents\SaninKursach3\TicketHelper\x64\Debug\TicketHelper.vcxproj.GenerateResource.cache
 C:\Users\hnure\Documents\SaninKursach3\TicketHelper\x64\Debug\TicketHelper.exe
+C:\Users\hnure\Documents\SaninKursach3\TicketHelper\x64\Debug\TicketHelper.AllEventViewerForm.resources
