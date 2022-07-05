@@ -1,6 +1,7 @@
+  TicketHelper.AdminRoomForm.resources - Embedded, ContainedInManifestFile, 
   TicketHelper.RegAuthForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
-Assembly TicketHelper, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+Assembly TicketHelper, Version=0.0.*, Culture=Инвариантный язык (Инвариантная страна): 
 	hash=SHA1, flags=PublicKey
 Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
@@ -25,6 +26,16 @@ Struct Date: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, Bef
   :System.ValueType
 Struct Event: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
   :System.ValueType
+Struct Adress: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Methods:
+    <MarshalCopy>(Adress*, Adress*): PrivateScope, Public, Static, SpecialName
+    <MarshalDestroy>(Adress*): PrivateScope, Public, Static, SpecialName
+Struct Theatre: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Methods:
+    <MarshalCopy>(Theatre*, Theatre*): PrivateScope, Public, Static, SpecialName
+    <MarshalDestroy>(Theatre*): PrivateScope, Public, Static, SpecialName
 Struct Visitor: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
   :System.ValueType
   Methods:
@@ -32,6 +43,9 @@ Struct Visitor: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, 
     <MarshalDestroy>(Visitor*): PrivateScope, Public, Static, SpecialName
 Struct RegController: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
   :System.ValueType
+Class TicketHelper.AdminRoomForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Admin*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class TicketHelper.RegAuthForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

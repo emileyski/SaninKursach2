@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -12,6 +13,18 @@ public struct Time
 		this->hour = hour;
 		this->minute = minute;
 	}
+
+	string ToString() {
+		ostringstream converter; 
+		converter << hour;
+		string a = (hour < 10) ? "0" + converter.str() : converter.str();
+		a += ":";
+		converter = ostringstream();
+		converter << minute;
+		a += (minute < 10) ? "0" + converter.str() : converter.str();
+		return a;
+	}
+
 };
 
 public struct Date
@@ -27,13 +40,22 @@ public struct Date
 		this->month = month;
 		this->year = year;
 	}
+	string ToString() {
+		ostringstream converter; 
+		converter << day;
+		string a = converter.str();	a += "/";
+		converter = ostringstream(); converter << month;
+		a += converter.str();	a += "/";
+		converter = ostringstream(); converter << year;
+		a += converter.str();
+		return a;
+	}
 };
 
 public class Event
 {
 public:
 	string eventName, theatreName;
-	int placeCount;
 	Date date;
 	Time startTime, endTime;
 	Event(){};
@@ -41,9 +63,8 @@ public:
 		this->eventName = eventName;
 
 	};
-	Event(string eventName, int placeCount, Date date, Time startTime, Time endTime){
+	Event(string eventName, Date date, Time startTime, Time endTime){
 		this->eventName = eventName;
-		this->placeCount = placeCount;
 		this->date = date;
 		this->startTime = startTime;
 		this->endTime = endTime;

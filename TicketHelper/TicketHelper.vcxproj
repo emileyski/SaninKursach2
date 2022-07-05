@@ -122,10 +122,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AdminRoomForm.cpp" />
     <ClCompile Include="RegAuthForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Admin.h" />
+    <ClInclude Include="AdminRoomForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Event.h" />
     <ClInclude Include="RegAuthForm.h">
       <FileType>CppForm</FileType>
@@ -135,6 +139,9 @@
     <ClInclude Include="Visitor.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdminRoomForm.resx">
+      <DependentUpon>AdminRoomForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegAuthForm.resx">
       <DependentUpon>RegAuthForm.h</DependentUpon>
     </EmbeddedResource>
@@ -148,7 +155,7 @@
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('packages\nlohmann.json.3.10.5\build\native\nlohmann.json.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\nlohmann.json.3.10.5\build\native\nlohmann.json.targets'))" />
   </Target>
