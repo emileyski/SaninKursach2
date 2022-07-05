@@ -15,7 +15,7 @@ public :
 	Adress(int number ,string street, string city){
 		this->number = number;
 		this->street = street;
-		this->city = street;
+		this->city = city;
 	}
 	string ToString() {
 		ostringstream converter;
