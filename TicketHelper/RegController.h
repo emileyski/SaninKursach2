@@ -187,6 +187,8 @@ public:
 				currentEvent.startTime.hour = jEvents[iter2]["StartTime"]["Hour"];
 				currentEvent.startTime.minute = jEvents[iter2]["StartTime"]["Minute"];
 
+				currentEvent.endTime.hour = jEvents[iter2]["EndTime"]["Hour"];
+				currentEvent.endTime.minute = jEvents[iter2]["EndTime"]["Minute"];
 				currentAccount.tickets.push_back(currentEvent);
 			}
 
