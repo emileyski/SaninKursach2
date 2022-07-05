@@ -15,3 +15,5 @@ C:\Users\hnure\Documents\SaninKursach3\TicketHelper\x64\Debug\TicketHelper.RegAu
 C:\Users\hnure\Documents\SaninKursach3\TicketHelper\x64\Debug\TicketHelper.vcxproj.GenerateResource.cache
 C:\Users\hnure\Documents\SaninKursach3\TicketHelper\x64\Debug\TicketHelper.exe
 C:\Users\hnure\Documents\SaninKursach3\TicketHelper\x64\Debug\TicketHelper.AllEventViewerForm.resources
+C:\My files\#Programming\C++\SaninKursach2\TicketHelper\x64\Debug\TicketHelper.AdminRoomForm.resources
+C:\My files\#Programming\C++\SaninKursach2\TicketHelper\x64\Debug\TicketHelper.AllEventViewerForm.resources

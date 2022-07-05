@@ -15,7 +15,7 @@ using json = nlohmann::json;
 public class RegController
 {
 public:
-	std::string json_write(Admin admin)
+	std::string jsonWriteAccount(Admin admin)
 	{
 		const std::string fileName = "adminAccounts.json";
 		std::ifstream reader;
@@ -57,7 +57,7 @@ public:
 		}
 		return jAccounts.dump();
 	}
-	std::string json_write(Visitor visitor)
+	std::string jsonWriteAccount(Visitor visitor)
 	{
 		const std::string fileName = "visitorAccounts.json";
 		std::ifstream reader;
@@ -198,7 +198,7 @@ public:
 		return visitorAccounts;
 	}
 
-	std::string json_write_theatre(Theatre theatre)
+	std::string jsonWriteTheatre(Theatre theatre)
 	{
 		const std::string fileName = "theatreBase.json";
 		std::ifstream reader;
@@ -311,13 +311,13 @@ public:
 		return theatres;
 	}
 
-	void remove_and_rewrite_theatre_list(int index) {
+	void removeThetreAtIndex(int index) {
 		vector<Theatre> theatres = GetTheatresVector();
 		theatres.erase(theatres.begin() + index);
 		remove("theatreBase.json");
 
 		for (int i = 0; i < theatres.size(); i++) {
-			json_write_theatre(theatres[i]);
+			jsonWriteTheatre(theatres[i]);
 		}
 	}
 };
