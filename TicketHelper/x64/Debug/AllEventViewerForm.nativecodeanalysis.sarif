@@ -1,0 +1,59 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.32.31332.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/my files/#programming/c++/saninkursach2/tickethelper/alleventviewerform.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "f3fd62014b9bc59fa628648559db3c67b0f57af8fb9425676d3c660751d48ba0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/my files/#programming/c++/saninkursach2/tickethelper/alleventviewerform.h"
+          },
+          "hashes": {
+            "sha-256": "3631112aa521bc7873b4c1ad2c28c40a3a7a33587e51e68d4a0e88a9f85a73b0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/my files/#programming/c++/saninkursach2/tickethelper/theatre.h"
+          },
+          "hashes": {
+            "sha-256": "fd74a6191a864a3dff436c14ad28199754f001c8baa8abb95110a7d5b2df5211"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/my files/#programming/c++/saninkursach2/tickethelper/event.h"
+          },
+          "hashes": {
+            "sha-256": "3cbf47bf2263c0139864f0982ae3f89c58074244e6cbc56719ee601b85a9aab5"
+          }
+        }
+      ]
+    }
+  ]
+}

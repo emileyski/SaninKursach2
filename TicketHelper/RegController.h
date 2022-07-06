@@ -320,4 +320,21 @@ public:
 			jsonWriteTheatre(theatres[i]);
 		}
 	}
+	void replaceAtIndex(Theatre theatre, int index)
+	{
+		vector<Theatre> theatres = GetTheatresVector();
+		theatres[index] = theatre;
+
+		remove("theatreBase.json");
+
+		for (int i = 0; i < theatres.size(); i++) {
+			jsonWriteTheatre(theatres[i]);
+		}
+	}
+	Theatre GetTheatreAtIndex(int index)
+	{
+		vector<Theatre> theatres = GetTheatresVector();
+		Theatre selectedTheatre = theatres[index];
+		return selectedTheatre;
+	}
 };

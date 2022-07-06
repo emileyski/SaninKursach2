@@ -1,0 +1,191 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C28020",
+          "message": {
+            "text": "The expression '0<=_Param_(1)&&_Param_(1)<=400-1' is not true at this call."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/My files/#Programming/C++/SaninKursach2/TicketHelper/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 18184,
+                  "startColumn": 28,
+                  "endLine": 18184,
+                  "endColumn": 45
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "nlohmann::detail::serializer<nlohmann::basic_json<std::map,std::vector,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,bool,__int64,unsigned __int64,double,std::allocator,nlohmann::adl_serializer,std::vector<unsigned char,std::allocator<unsigned char> > > >::decode",
+                  "decoratedName": "?decode@?$serializer@V?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@@nlohmann@@@detail@nlohmann@@$$FCAEAEAEAEAIE@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/my files/#programming/c++/saninkursach2/tickethelper/nlohmann/json.hpp"
+                          },
+                          "region": {
+                            "startLine": 18163,
+                            "startColumn": 52
+                          }
+                        }
+                      },
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/my files/#programming/c++/saninkursach2/tickethelper/nlohmann/json.hpp"
+                          },
+                          "region": {
+                            "startLine": 18183,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/my files/#programming/c++/saninkursach2/tickethelper/nlohmann/json.hpp"
+                          },
+                          "region": {
+                            "startLine": 18184,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "important"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.32.31332.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/My files/#Programming/C++/SaninKursach2/TicketHelper/nlohmann/json.hpp"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "35269aa0aaf24038ae9907f2650a0fb719e76c8c5a57330833faf964c978e89c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/my files/#programming/c++/saninkursach2/tickethelper/regauthform.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "d777c8f1b50347dc82b9b6db45babe6ceae8d267e9b4c055d57a1e9c0430f1a0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/my files/#programming/c++/saninkursach2/tickethelper/regauthform.h"
+          },
+          "hashes": {
+            "sha-256": "1dd433b8a13e72ac4a04be682add0eef5e5edd5e200f146ccc2385880a43f1f3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/my files/#programming/c++/saninkursach2/tickethelper/admin.h"
+          },
+          "hashes": {
+            "sha-256": "baebbf55de89880bc7d786481f308f6f947d2f6007f047d0bdf7222f036e614b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/my files/#programming/c++/saninkursach2/tickethelper/regcontroller.h"
+          },
+          "hashes": {
+            "sha-256": "5d415406df3772f40cab540519a00601bd9d79f0db83f2bb36cd8e792ee59f77"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/my files/#programming/c++/saninkursach2/tickethelper/theatre.h"
+          },
+          "hashes": {
+            "sha-256": "fd74a6191a864a3dff436c14ad28199754f001c8baa8abb95110a7d5b2df5211"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/my files/#programming/c++/saninkursach2/tickethelper/event.h"
+          },
+          "hashes": {
+            "sha-256": "3cbf47bf2263c0139864f0982ae3f89c58074244e6cbc56719ee601b85a9aab5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/my files/#programming/c++/saninkursach2/tickethelper/visitor.h"
+          },
+          "hashes": {
+            "sha-256": "8fa83c68f43f2f6130d6b29b3348205c963e3038485d552b6f9019549199a3ae"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/my files/#programming/c++/saninkursach2/tickethelper/adminroomform.h"
+          },
+          "hashes": {
+            "sha-256": "21284b353225497e4dc17707771393b44781d1a89ee544e9dfaaad118ce0b27b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/my files/#programming/c++/saninkursach2/tickethelper/alleventviewerform.h"
+          },
+          "hashes": {
+            "sha-256": "3631112aa521bc7873b4c1ad2c28c40a3a7a33587e51e68d4a0e88a9f85a73b0"
+          }
+        }
+      ]
+    }
+  ]
+}
