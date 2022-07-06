@@ -23,6 +23,7 @@ namespace TicketHelper {
 		EditTheatreForm(int index)
 		{
 			InitializeComponent();
+			this->index = index;
 			vector<Theatre> theatres = RegController().GetTheatresVector();
 			tbTheatreName->Text = gcnew String(theatres[index].theatreName.data());
 			tbTheatreCity->Text = gcnew String(theatres[index].adress.city.data());
@@ -290,7 +291,7 @@ namespace TicketHelper {
 			Adress(stoi(context.marshal_as<std::string>(tbTheatreNum->Text->ToString())), context.marshal_as<std::string>(tbTheatreStreet->Text), context.marshal_as<std::string>(tbTheatreCity->Text)),
 			theatres[index].events);
 
-		RegController().replaceAtIndex(currentTheatre, index);
+		RegController().replaceTheatreAtIndex(currentTheatre, index);
 		this->Close();
 	}
 };

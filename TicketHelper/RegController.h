@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <string>
 #include "nlohmann/json.hpp"
 #include <fstream>
@@ -15,6 +15,7 @@ using json = nlohmann::json;
 public class RegController
 {
 public:
+	//записує акаунт адміна у файл
 	std::string jsonWriteAccount(Admin admin)
 	{
 		const std::string fileName = "adminAccounts.json";
@@ -57,6 +58,8 @@ public:
 		}
 		return jAccounts.dump();
 	}
+
+	//записує акаунт відвідувач у файл
 	std::string jsonWriteAccount(Visitor visitor)
 	{
 		const std::string fileName = "visitorAccounts.json";
@@ -118,6 +121,7 @@ public:
 		return jAccounts.dump();
 	}
 
+	//повертає вектор адміністраторів 
 	vector<Admin> GetAdminAccountsVector()
 	{
 		const string fileName = "adminAccounts.json";
@@ -146,6 +150,8 @@ public:
 
 		return adminAccounts;
 	}
+
+	//повертає вектор відвідувачів
 	vector<Visitor> GetVisitorAccountsVector()
 	{
 		const string fileName = "visitorAccounts.json";
@@ -198,6 +204,7 @@ public:
 		return visitorAccounts;
 	}
 
+	//записує театр у файл
 	std::string jsonWriteTheatre(Theatre theatre)
 	{
 		const std::string fileName = "theatreBase.json";
@@ -258,6 +265,8 @@ public:
 		}
 		return jTheatres.dump();
 	}
+
+	//повертає вектор всіх театрів
 	vector<Theatre> GetTheatresVector() {
 		const string fileName = "theatreBase.json";
 
@@ -311,30 +320,49 @@ public:
 		return theatres;
 	}
 
+	//додає подію до театру
+	void addEventToTheatre(int index, Event _event)
+	{
+		vector<Theatre> theatres = GetTheatresVector();
+		theatres[index].events.push_back(_event);
+
+		rewriteTheatreBase(theatres);
+		
+	}
+
+	//видаляє театр по індексу
 	void removeThetreAtIndex(int index) {
 		vector<Theatre> theatres = GetTheatresVector();
 		theatres.erase(theatres.begin() + index);
-		remove("theatreBase.json");
+		rewriteTheatreBase(theatres);
 
-		for (int i = 0; i < theatres.size(); i++) {
-			jsonWriteTheatre(theatres[i]);
-		}
 	}
-	void replaceAtIndex(Theatre theatre, int index)
+
+	//заміняє театр по індексу
+	void replaceTheatreAtIndex(Theatre theatre, int index)
 	{
 		vector<Theatre> theatres = GetTheatresVector();
 		theatres[index] = theatre;
 
-		remove("theatreBase.json");
+		rewriteTheatreBase(theatres);
 
-		for (int i = 0; i < theatres.size(); i++) {
-			jsonWriteTheatre(theatres[i]);
-		}
 	}
+
+	//повертає театр за індексом
 	Theatre GetTheatreAtIndex(int index)
 	{
 		vector<Theatre> theatres = GetTheatresVector();
 		Theatre selectedTheatre = theatres[index];
 		return selectedTheatre;
+	}
+
+//метод що перезаписує базу театрів, приймає вектор театрів
+private: void rewriteTheatreBase(vector<Theatre> theatres)
+	{
+		remove("theatreBase.json");
+
+		for (int i = 0; i < theatres.size(); i++) {
+			jsonWriteTheatre(theatres[i]);
+		}
 	}
 };

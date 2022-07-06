@@ -28,6 +28,9 @@ Struct Date: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, Bef
   :System.ValueType
 Struct Event: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
   :System.ValueType
+  Methods:
+    <MarshalCopy>(Event*, Event*): PrivateScope, Public, Static, SpecialName
+    <MarshalDestroy>(Event*): PrivateScope, Public, Static, SpecialName
 Struct Adress: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
   :System.ValueType
   Methods:
