@@ -50,7 +50,7 @@ Class TicketHelper.AllEventViewerForm: AutoLayout, AnsiClass, Class, Public, Bef
     Void .ctor(Theatre*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class TicketHelper.EditTheatreForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(Theatre*, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class TicketHelper.AdminRoomForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(Admin*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

@@ -2,6 +2,7 @@
 #include "Theatre.h"
 #include <msclr\marshal_cppstd.h>
 #include "RegController.h"
+#include "Theatre.h"
 namespace TicketHelper {
 
 	using namespace System;
@@ -17,24 +18,16 @@ namespace TicketHelper {
 	public ref class EditTheatreForm : public System::Windows::Forms::Form
 	{
 	private:
-		vector<Event>* currentEventVector;
 		int index;
 	public:
-		EditTheatreForm(Theatre theatre, int index)
+		EditTheatreForm(int index)
 		{
 			InitializeComponent();
-			
-			tbTheatreName->Text = gcnew String(theatre.theatreName.data());
-			tbTheatreCity->Text = gcnew String(theatre.adress.city.data());
-			tbTheatreStreet->Text = gcnew String(theatre.adress.street.data());
-			tbTheatreNum->Text = gcnew String(theatre.adress.number.ToString());
-			currentEventVector = new vector<Event>(theatre.events.size());
-			for (int i = 0; i < theatre.events.size(); i++)
-			{
-				currentEventVector->push_back(theatre.events[i]);
-			}
-			this->index = index;
-
+			vector<Theatre> theatres = RegController().GetTheatresVector();
+			tbTheatreName->Text = gcnew String(theatres[index].theatreName.data());
+			tbTheatreCity->Text = gcnew String(theatres[index].adress.city.data());
+			tbTheatreStreet->Text = gcnew String(theatres[index].adress.street.data());
+			tbTheatreNum->Text = gcnew String(theatres[index].adress.number.ToString());
 		}
 
 	protected:
@@ -148,7 +141,7 @@ namespace TicketHelper {
 			this->tbTheatreNum->Location = System::Drawing::Point(222, 260);
 			this->tbTheatreNum->Name = L"tbTheatreNum";
 			this->tbTheatreNum->Size = System::Drawing::Size(235, 32);
-			this->tbTheatreNum->TabIndex = 37;
+			this->tbTheatreNum->TabIndex = 4;
 			// 
 			// tbTheatreStreet
 			// 
@@ -158,7 +151,7 @@ namespace TicketHelper {
 			this->tbTheatreStreet->Location = System::Drawing::Point(222, 223);
 			this->tbTheatreStreet->Name = L"tbTheatreStreet";
 			this->tbTheatreStreet->Size = System::Drawing::Size(235, 32);
-			this->tbTheatreStreet->TabIndex = 38;
+			this->tbTheatreStreet->TabIndex = 3;
 			// 
 			// tbTheatreCity
 			// 
@@ -168,7 +161,7 @@ namespace TicketHelper {
 			this->tbTheatreCity->Location = System::Drawing::Point(222, 186);
 			this->tbTheatreCity->Name = L"tbTheatreCity";
 			this->tbTheatreCity->Size = System::Drawing::Size(235, 32);
-			this->tbTheatreCity->TabIndex = 39;
+			this->tbTheatreCity->TabIndex = 2;
 			// 
 			// tbTheatreName
 			// 
@@ -179,7 +172,7 @@ namespace TicketHelper {
 			this->tbTheatreName->Location = System::Drawing::Point(222, 117);
 			this->tbTheatreName->Name = L"tbTheatreName";
 			this->tbTheatreName->Size = System::Drawing::Size(235, 32);
-			this->tbTheatreName->TabIndex = 40;
+			this->tbTheatreName->TabIndex = 1;
 			// 
 			// label1
 			// 
@@ -247,7 +240,7 @@ namespace TicketHelper {
 			this->btnConfirm->Location = System::Drawing::Point(222, 314);
 			this->btnConfirm->Name = L"btnConfirm";
 			this->btnConfirm->Size = System::Drawing::Size(168, 39);
-			this->btnConfirm->TabIndex = 44;
+			this->btnConfirm->TabIndex = 5;
 			this->btnConfirm->Text = L"Confirm";
 			this->btnConfirm->UseVisualStyleBackColor = false;
 			this->btnConfirm->Click += gcnew System::EventHandler(this, &EditTheatreForm::btnConfirm_Click);
@@ -291,11 +284,14 @@ namespace TicketHelper {
 	private: System::Void btnConfirm_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		msclr::interop::marshal_context context;
-
+		vector<Theatre> theatres = RegController().GetTheatresVector();
+	
 		Theatre currentTheatre(context.marshal_as<std::string>(this->tbTheatreName->Text),
 			Adress(stoi(context.marshal_as<std::string>(tbTheatreNum->Text->ToString())), context.marshal_as<std::string>(tbTheatreStreet->Text), context.marshal_as<std::string>(tbTheatreCity->Text)),
-			*currentEventVector);
+			theatres[index].events);
+
 		RegController().replaceAtIndex(currentTheatre, index);
+		this->Close();
 	}
 };
 }
