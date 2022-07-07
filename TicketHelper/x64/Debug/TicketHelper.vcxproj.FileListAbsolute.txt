@@ -18,3 +18,5 @@ C:\Users\hnure\Documents\SaninKursach3\TicketHelper\x64\Debug\TicketHelper.AllEv
 C:\My files\#Programming\C++\SaninKursach2\TicketHelper\x64\Debug\TicketHelper.AdminRoomForm.resources
 C:\My files\#Programming\C++\SaninKursach2\TicketHelper\x64\Debug\TicketHelper.AllEventViewerForm.resources
 C:\My files\#Programming\C++\SaninKursach2\TicketHelper\x64\Debug\TicketHelper.EditTheatreForm.resources
+C:\Users\hnure\Documents\SaninKursach3\TicketHelper\x64\Debug\TicketHelper.EditTheatreForm.resources
+C:\Users\hnure\Documents\SaninKursach3\TicketHelper\x64\Debug\TicketHelper.VisitorRoomForm.resources

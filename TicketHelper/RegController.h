@@ -356,6 +356,17 @@ public:
 		return selectedTheatre;
 	}
 
+	//повертає список всіх подій (івентів)
+	vector<Event> GetAllEvents() {
+		vector<Theatre> theatres = GetTheatresVector();
+		vector<Event> events;
+		for (int i = 0; i < theatres.size(); i++) {
+			for (int j = 0; j < theatres[i].events.size(); j++)
+				events.push_back(theatres[i].events[j]);
+		}
+		return events;
+	}
+
 //метод що перезаписує базу театрів, приймає вектор театрів
 private: void rewriteTheatreBase(vector<Theatre> theatres)
 	{

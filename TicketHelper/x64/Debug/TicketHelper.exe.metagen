@@ -2,8 +2,9 @@
   TicketHelper.AllEventViewerForm.resources - Embedded, ContainedInManifestFile, 
   TicketHelper.EditTheatreForm.resources - Embedded, ContainedInManifestFile, 
   TicketHelper.RegAuthForm.resources - Embedded, ContainedInManifestFile, 
+  TicketHelper.VisitorRoomForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
-Assembly TicketHelper, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+Assembly TicketHelper, Version=0.0.*, Culture=Инвариантный язык (Инвариантная страна): 
 	hash=SHA1, flags=PublicKey
 Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
@@ -57,6 +58,11 @@ Class TicketHelper.EditTheatreForm: AutoLayout, AnsiClass, Class, Public, Before
 Class TicketHelper.AdminRoomForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(Admin*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Struct FindController: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Class TicketHelper.VisitorRoomForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Visitor*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class TicketHelper.RegAuthForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
