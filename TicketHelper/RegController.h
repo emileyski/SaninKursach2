@@ -354,10 +354,7 @@ public:
 
 		rewriteTheatreBase(theatres);
 
-		delete[] currentTheatreEvents, eventToDelete;
-
 	}
-
 	//додає квиток до відвідувача
 	void addEventToVisitor(std::string login, Event _event)
 	{
