@@ -330,8 +330,33 @@ public:
 		
 	}
 
-	//видаляє івент з театру
-	void removeEventFromTheatre(int index);
+	//видаляє івент з театру по індексу івента
+	void removeEventFromTheatre(int theatreIndex, int eventIndex)
+	{
+		vector<Theatre> theatres = GetTheatresVector();
+		vector<Event>* currentTheatreEvents = &theatres[theatreIndex].events;
+		Event* eventToDelete = &theatres[theatreIndex].events[eventIndex];
+
+		vector<Visitor> visitors = GetVisitorAccountsVector();
+
+		for (int i = 0; i < visitors.size(); i++)
+		{
+			for (int j = 0; j < visitors[i].tickets.size(); j++)
+			{
+				if (eventToDelete->eventName == visitors[i].tickets[j].eventName)
+				{
+					visitors[i].tickets.erase(visitors[i].tickets.begin() + j);
+				}
+			}
+		}
+
+		currentTheatreEvents->erase(currentTheatreEvents->begin() + eventIndex);
+
+		rewriteTheatreBase(theatres);
+
+		delete[] currentTheatreEvents, eventToDelete;
+
+	}
 
 	//додає квиток до відвідувача
 	void addEventToVisitor(std::string login, Event _event)
@@ -349,7 +374,7 @@ public:
 	}
 
 	//видаляє театр по індексу
-	void removeThetreAtIndex(int index) {
+	void removeTheatreAtIndex(int index) {
 		vector<Theatre> theatres = GetTheatresVector();
 		theatres.erase(theatres.begin() + index);
 		rewriteTheatreBase(theatres);
@@ -394,6 +419,8 @@ private: void rewriteTheatreBase(vector<Theatre> theatres)
 			jsonWriteTheatre(theatres[i]);
 		}
 	}
+
+	   //метод що перезаписує базу аккаунтів відвідувачів, приймає вектор відвідувачів
 	   void rewriteVisitorAccountsBase(vector<Visitor> visitors)
 	   {
 		   remove("visitorAccounts.json");
