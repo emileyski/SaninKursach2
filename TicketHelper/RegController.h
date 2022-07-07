@@ -330,8 +330,6 @@ public:
 		
 	}
 
-<<<<<<< Updated upstream
-=======
 	//видаляє івент з театру по індексу івента
 	void removeEventFromTheatre(int theatreIndex, int eventIndex)
 	{
@@ -356,10 +354,7 @@ public:
 
 		rewriteTheatreBase(theatres);
 
-
 	}
-
->>>>>>> Stashed changes
 	//додає квиток до відвідувача
 	void addEventToVisitor(std::string login, Event _event)
 	{
@@ -376,7 +371,7 @@ public:
 	}
 
 	//видаляє театр по індексу
-	void removeThetreAtIndex(int index) {
+	void removeTheatreAtIndex(int index) {
 		vector<Theatre> theatres = GetTheatresVector();
 		theatres.erase(theatres.begin() + index);
 		rewriteTheatreBase(theatres);
@@ -421,6 +416,8 @@ private: void rewriteTheatreBase(vector<Theatre> theatres)
 			jsonWriteTheatre(theatres[i]);
 		}
 	}
+
+	   //метод що перезаписує базу аккаунтів відвідувачів, приймає вектор відвідувачів
 	   void rewriteVisitorAccountsBase(vector<Visitor> visitors)
 	   {
 		   remove("visitorAccounts.json");
