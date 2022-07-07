@@ -330,6 +330,9 @@ public:
 		
 	}
 
+	//видаляє івент з театру
+	void removeEventFromTheatre(int index);
+
 	//додає квиток до відвідувача
 	void addEventToVisitor(std::string login, Event _event)
 	{
