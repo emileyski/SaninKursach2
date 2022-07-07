@@ -330,6 +330,36 @@ public:
 		
 	}
 
+<<<<<<< Updated upstream
+=======
+	//видаляє івент з театру по індексу івента
+	void removeEventFromTheatre(int theatreIndex, int eventIndex)
+	{
+		vector<Theatre> theatres = GetTheatresVector();
+		vector<Event>* currentTheatreEvents = &theatres[theatreIndex].events;
+		Event* eventToDelete = &theatres[theatreIndex].events[eventIndex];
+
+		vector<Visitor> visitors = GetVisitorAccountsVector();
+
+		for (int i = 0; i < visitors.size(); i++)
+		{
+			for (int j = 0; j < visitors[i].tickets.size(); j++)
+			{
+				if (eventToDelete->eventName == visitors[i].tickets[j].eventName)
+				{
+					visitors[i].tickets.erase(visitors[i].tickets.begin() + j);
+				}
+			}
+		}
+
+		currentTheatreEvents->erase(currentTheatreEvents->begin() + eventIndex);
+
+		rewriteTheatreBase(theatres);
+
+
+	}
+
+>>>>>>> Stashed changes
 	//додає квиток до відвідувача
 	void addEventToVisitor(std::string login, Event _event)
 	{
