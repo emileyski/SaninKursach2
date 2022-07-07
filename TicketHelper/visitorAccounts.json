@@ -1,1 +1,237 @@
-[{"Login":"ewrfewrf","Name":"fewrfer","Password":"fewrfewrf","Surname":"fewrfer","Tickets":[{"Date":{"Day":0,"Month":0,"Year":0},"EndTime":{"Hour":0,"Minute":0},"EventName":"gf","PlaceCount":0,"StartTime":{"Hour":0,"Minute":0},"TheatreName":""},{"Date":{"Day":0,"Month":0,"Year":0},"EndTime":{"Hour":0,"Minute":0},"EventName":"gf","PlaceCount":0,"StartTime":{"Hour":0,"Minute":0},"TheatreName":""},{"Date":{"Day":0,"Month":0,"Year":0},"EndTime":{"Hour":0,"Minute":0},"EventName":"gf","PlaceCount":0,"StartTime":{"Hour":0,"Minute":0},"TheatreName":""}]},{"Login":"erwe","Name":"wewe","Password":"wer","Surname":"wewe","Tickets":[{"Date":{"Day":135,"Month":1084834048,"Year":545},"EndTime":{"Hour":1084834048,"Minute":545},"EventName":"gf","PlaceCount":-2114985384,"StartTime":{"Hour":-2114985440,"Minute":135},"TheatreName":""},{"Date":{"Day":0,"Month":1084834048,"Year":545},"EndTime":{"Hour":1115611520,"Minute":545},"EventName":"gf","PlaceCount":514,"StartTime":{"Hour":1116293760,"Minute":545},"TheatreName":""},{"Date":{"Day":0,"Month":0,"Year":0},"EndTime":{"Hour":0,"Minute":0},"EventName":"gf","PlaceCount":0,"StartTime":{"Hour":0,"Minute":0},"TheatreName":""}]},{"Login":"ded","Name":"dwde","Password":"deded","Surname":"dwde","Tickets":[{"Date":{"Day":0,"Month":0,"Year":0},"EndTime":{"Hour":0,"Minute":0},"EventName":"gf","PlaceCount":0,"StartTime":{"Hour":0,"Minute":0},"TheatreName":""},{"Date":{"Day":0,"Month":0,"Year":0},"EndTime":{"Hour":0,"Minute":0},"EventName":"gf","PlaceCount":0,"StartTime":{"Hour":0,"Minute":0},"TheatreName":""},{"Date":{"Day":0,"Month":0,"Year":0},"EndTime":{"Hour":0,"Minute":0},"EventName":"gf","PlaceCount":0,"StartTime":{"Hour":0,"Minute":0},"TheatreName":""}]},{"Login":"gfd","Name":"gfd","Password":"gfd","Surname":"gfd","Tickets":null},{"Login":"gfd","Name":"gfd","Password":"gfd","Surname":"gfd","Tickets":null},{"Login":"gfd","Name":"gfd","Password":"gfd","Surname":"gfd","Tickets":null},{"Login":"gfd","Name":"gfd","Password":"gfd","Surname":"gfd","Tickets":null},{"Login":"hfghjf","Name":"hfghjf","Password":"hfghjf","Surname":"hfghjf","Tickets":null},{"Login":"hfghjf","Name":"hfghjf","Password":"hfghjf","Surname":"hfghjf","Tickets":null},{"Login":"E","Name":"Bohdasik","Password":"","Surname":"Karasik","Tickets":null}]
+[
+  {
+    "Login": "ewrfewrf",
+    "Name": "fewrfer",
+    "Password": "fewrfewrf",
+    "Surname": "fewrfer",
+    "Tickets": [
+      {
+        "Date": {
+          "Day": 0,
+          "Month": 0,
+          "Year": 0
+        },
+        "EndTime": {
+          "Hour": 0,
+          "Minute": 0
+        },
+        "EventName": "gf",
+        "PlaceCount": 0,
+        "StartTime": {
+          "Hour": 0,
+          "Minute": 0
+        },
+        "TheatreName": ""
+      },
+      {
+        "Date": {
+          "Day": 0,
+          "Month": 0,
+          "Year": 0
+        },
+        "EndTime": {
+          "Hour": 0,
+          "Minute": 0
+        },
+        "EventName": "gf",
+        "PlaceCount": 0,
+        "StartTime": {
+          "Hour": 0,
+          "Minute": 0
+        },
+        "TheatreName": ""
+      },
+      {
+        "Date": {
+          "Day": 0,
+          "Month": 0,
+          "Year": 0
+        },
+        "EndTime": {
+          "Hour": 0,
+          "Minute": 0
+        },
+        "EventName": "gf",
+        "PlaceCount": 0,
+        "StartTime": {
+          "Hour": 0,
+          "Minute": 0
+        },
+        "TheatreName": ""
+      }
+    ]
+  },
+  {
+    "Login": "erwe",
+    "Name": "wewe",
+    "Password": "wer",
+    "Surname": "wewe",
+    "Tickets": [
+      {
+        "Date": {
+          "Day": 135,
+          "Month": 1084834048,
+          "Year": 545
+        },
+        "EndTime": {
+          "Hour": 1084834048,
+          "Minute": 545
+        },
+        "EventName": "gf",
+        "PlaceCount": -2114985384,
+        "StartTime": {
+          "Hour": -2114985440,
+          "Minute": 135
+        },
+        "TheatreName": ""
+      },
+      {
+        "Date": {
+          "Day": 0,
+          "Month": 1084834048,
+          "Year": 545
+        },
+        "EndTime": {
+          "Hour": 1115611520,
+          "Minute": 545
+        },
+        "EventName": "gf",
+        "PlaceCount": 514,
+        "StartTime": {
+          "Hour": 1116293760,
+          "Minute": 545
+        },
+        "TheatreName": ""
+      },
+      {
+        "Date": {
+          "Day": 0,
+          "Month": 0,
+          "Year": 0
+        },
+        "EndTime": {
+          "Hour": 0,
+          "Minute": 0
+        },
+        "EventName": "gf",
+        "PlaceCount": 0,
+        "StartTime": {
+          "Hour": 0,
+          "Minute": 0
+        },
+        "TheatreName": ""
+      }
+    ]
+  },
+  {
+    "Login": "ded",
+    "Name": "dwde",
+    "Password": "deded",
+    "Surname": "dwde",
+    "Tickets": [
+      {
+        "Date": {
+          "Day": 0,
+          "Month": 0,
+          "Year": 0
+        },
+        "EndTime": {
+          "Hour": 0,
+          "Minute": 0
+        },
+        "EventName": "gf",
+        "PlaceCount": 0,
+        "StartTime": {
+          "Hour": 0,
+          "Minute": 0
+        },
+        "TheatreName": ""
+      },
+      {
+        "Date": {
+          "Day": 0,
+          "Month": 0,
+          "Year": 0
+        },
+        "EndTime": {
+          "Hour": 0,
+          "Minute": 0
+        },
+        "EventName": "gf",
+        "PlaceCount": 0,
+        "StartTime": {
+          "Hour": 0,
+          "Minute": 0
+        },
+        "TheatreName": ""
+      },
+      {
+        "Date": {
+          "Day": 0,
+          "Month": 0,
+          "Year": 0
+        },
+        "EndTime": {
+          "Hour": 0,
+          "Minute": 0
+        },
+        "EventName": "gf",
+        "PlaceCount": 0,
+        "StartTime": {
+          "Hour": 0,
+          "Minute": 0
+        },
+        "TheatreName": ""
+      }
+    ]
+  },
+  {
+    "Login": "gfd",
+    "Name": "gfd",
+    "Password": "gfd",
+    "Surname": "gfd",
+    "Tickets": null
+  },
+  {
+    "Login": "gfd",
+    "Name": "gfd",
+    "Password": "gfd",
+    "Surname": "gfd",
+    "Tickets": null
+  },
+  {
+    "Login": "gfd",
+    "Name": "gfd",
+    "Password": "gfd",
+    "Surname": "gfd",
+    "Tickets": null
+  },
+  {
+    "Login": "gfd",
+    "Name": "gfd",
+    "Password": "gfd",
+    "Surname": "gfd",
+    "Tickets": null
+  },
+  {
+    "Login": "hfghjf",
+    "Name": "hfghjf",
+    "Password": "hfghjf",
+    "Surname": "hfghjf",
+    "Tickets": null
+  },
+  {
+    "Login": "hfghjf",
+    "Name": "hfghjf",
+    "Password": "hfghjf",
+    "Surname": "hfghjf",
+    "Tickets": null
+  },
+  {
+    "Login": "E",
+    "Name": "Bohdasik",
+    "Password": "",
+    "Surname": "Karasik",
+    "Tickets": null
+  }
+]

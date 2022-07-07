@@ -1,10 +1,1 @@
-﻿  RegAuthForm.cpp
-C:\Users\hnure\Documents\SaninKursach3\TicketHelper\nlohmann\json.hpp(3805,101): warning C4003: недостаточно аргументов для вызова макроса, подобного функции, "max"
-C:\Users\hnure\Documents\SaninKursach3\TicketHelper\nlohmann\json.hpp(3815,101): warning C4003: недостаточно аргументов для вызова макроса, подобного функции, "max"
-C:\Users\hnure\Documents\SaninKursach3\TicketHelper\nlohmann\json.hpp(3825,113): warning C4003: недостаточно аргументов для вызова макроса, подобного функции, "max"
-C:\Users\hnure\Documents\SaninKursach3\TicketHelper\nlohmann\json.hpp(3836,101): warning C4003: недостаточно аргументов для вызова макроса, подобного функции, "min"
-C:\Users\hnure\Documents\SaninKursach3\TicketHelper\nlohmann\json.hpp(3837,104): warning C4003: недостаточно аргументов для вызова макроса, подобного функции, "max"
-  VisitorRoomForm.cpp
-  Создание кода...
-  AdminRoomForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
-  TicketHelper.vcxproj -> C:\Users\hnure\Documents\SaninKursach3\TicketHelper\x64\Debug\TicketHelper.exe
+﻿  TicketHelper.vcxproj -> C:\My files\#Programming\C++\SaninKursach2\TicketHelper\x64\Debug\TicketHelper.exe

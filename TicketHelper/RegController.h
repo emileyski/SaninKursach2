@@ -330,6 +330,21 @@ public:
 		
 	}
 
+	//додає квиток до відвідувача
+	void addEventToVisitor(std::string login, Event _event)
+	{
+		vector<Visitor> visitors= GetVisitorAccountsVector();
+
+		for (int i = 0; i < visitors.size(); i++)
+		{
+			if (login == visitors[i].login)
+			{
+				visitors[i].tickets.push_back(_event);
+			}
+		}
+		rewriteVisitorAccountsBase(visitors);
+	}
+
 	//видаляє театр по індексу
 	void removeThetreAtIndex(int index) {
 		vector<Theatre> theatres = GetTheatresVector();
@@ -376,4 +391,12 @@ private: void rewriteTheatreBase(vector<Theatre> theatres)
 			jsonWriteTheatre(theatres[i]);
 		}
 	}
+	   void rewriteVisitorAccountsBase(vector<Visitor> visitors)
+	   {
+		   remove("visitorAccounts.json");
+
+		   for (int i = 0; i < visitors.size(); i++) {
+			   jsonWriteAccount(visitors[i]);
+		   }
+	   }
 };
