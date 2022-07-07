@@ -63,8 +63,9 @@ public:
 		this->eventName = eventName;
 
 	};
-	Event(string eventName, Date date, Time startTime, Time endTime){
+	Event(string eventName, string theatreName, Date date, Time startTime, Time endTime){
 		this->eventName = eventName;
+		this->theatreName = theatreName;
 		this->date = date;
 		this->startTime = startTime;
 		this->endTime = endTime;

@@ -354,6 +354,10 @@ public:
 
 		rewriteTheatreBase(theatres);
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 	}
 	//додає квиток до відвідувача
 	void addEventToVisitor(std::string login, Event _event)

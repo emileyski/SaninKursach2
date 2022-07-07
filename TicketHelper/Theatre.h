@@ -35,10 +35,6 @@ public:
 		this->theatreName = theatreName;
 		this->adress = adress;
 		this->events = events;
-		for (int i = 0; i < events.size(); i++)
-		{
-			events[i].theatreName = this->theatreName;
-		}
 	};
 	~Theatre(){};
 
