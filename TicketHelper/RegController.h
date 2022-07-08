@@ -128,27 +128,33 @@ public:
 
 		json jAccounts;
 
+		vector<Admin> adminAccounts;
 		ifstream reader;
 		reader.open(fileName);
-		reader >> jAccounts;
-		reader.close();
-
-		vector<Admin> adminAccounts;
-		
-		int iter = 0;
-
-		for (auto i = jAccounts.begin(); i != jAccounts.end(); ++i, ++iter)
+		if (reader)
 		{
-			Admin currentAccount;
-			currentAccount.login = jAccounts[iter]["Login"];
-			currentAccount.name = jAccounts[iter]["Name"];
-			currentAccount.password = jAccounts[iter]["Password"];
-			currentAccount.surname = jAccounts[iter]["Surname"];
+			reader >> jAccounts;
+			reader.close();
 
-			adminAccounts.push_back(currentAccount);
+			
+
+			int iter = 0;
+
+			for (auto i = jAccounts.begin(); i != jAccounts.end(); ++i, ++iter)
+			{
+				Admin currentAccount;
+				currentAccount.login = jAccounts[iter]["Login"];
+				currentAccount.name = jAccounts[iter]["Name"];
+				currentAccount.password = jAccounts[iter]["Password"];
+				currentAccount.surname = jAccounts[iter]["Surname"];
+
+				adminAccounts.push_back(currentAccount);
+			}
+
+			
 		}
-
 		return adminAccounts;
+		
 	}
 
 	//повертає вектор відвідувачів
@@ -158,50 +164,57 @@ public:
 
 		json jAccounts;
 
+		vector<Visitor> visitorAccounts;
 		ifstream reader;
 		reader.open(fileName);
-		reader >> jAccounts;
-		reader.close();
 
-		vector<Visitor> visitorAccounts;
-
-		int iter = 0;
-
-		for (auto i = jAccounts.begin(); i != jAccounts.end(); ++i, ++iter)
+		if (reader)
 		{
-			Visitor currentAccount;
-			currentAccount.login = jAccounts[iter]["Login"];
-			currentAccount.name = jAccounts[iter]["Name"];
-			currentAccount.password = jAccounts[iter]["Password"];
-			currentAccount.surname = jAccounts[iter]["Surname"];
+			reader >> jAccounts;
+			reader.close();
 
-			json jEvents = jAccounts[iter]["Tickets"];
+			
 
+			int iter = 0;
 
-			int iter2 = 0;
-			for (auto j = jEvents.begin(); j != jEvents.end(); ++j, ++iter2)
+			for (auto i = jAccounts.begin(); i != jAccounts.end(); ++i, ++iter)
 			{
-				Event currentEvent;
+				Visitor currentAccount;
+				currentAccount.login = jAccounts[iter]["Login"];
+				currentAccount.name = jAccounts[iter]["Name"];
+				currentAccount.password = jAccounts[iter]["Password"];
+				currentAccount.surname = jAccounts[iter]["Surname"];
 
-				currentEvent.eventName = jEvents[iter2]["EventName"];
-				currentEvent.theatreName = jEvents[iter2]["TheatreName"];
+				json jEvents = jAccounts[iter]["Tickets"];
 
-				currentEvent.date.day = jEvents[iter2]["Date"]["Day"];
-				currentEvent.date.month = jEvents[iter2]["Date"]["Month"];
-				currentEvent.date.year = jEvents[iter2]["Date"]["Year"];
 
-				currentEvent.startTime.hour = jEvents[iter2]["StartTime"]["Hour"];
-				currentEvent.startTime.minute = jEvents[iter2]["StartTime"]["Minute"];
+				int iter2 = 0;
+				for (auto j = jEvents.begin(); j != jEvents.end(); ++j, ++iter2)
+				{
+					Event currentEvent;
 
-				currentEvent.endTime.hour = jEvents[iter2]["EndTime"]["Hour"];
-				currentEvent.endTime.minute = jEvents[iter2]["EndTime"]["Minute"];
-				currentAccount.tickets.push_back(currentEvent);
+					currentEvent.eventName = jEvents[iter2]["EventName"];
+					currentEvent.theatreName = jEvents[iter2]["TheatreName"];
+
+					currentEvent.date.day = jEvents[iter2]["Date"]["Day"];
+					currentEvent.date.month = jEvents[iter2]["Date"]["Month"];
+					currentEvent.date.year = jEvents[iter2]["Date"]["Year"];
+
+					currentEvent.startTime.hour = jEvents[iter2]["StartTime"]["Hour"];
+					currentEvent.startTime.minute = jEvents[iter2]["StartTime"]["Minute"];
+
+					currentEvent.endTime.hour = jEvents[iter2]["EndTime"]["Hour"];
+					currentEvent.endTime.minute = jEvents[iter2]["EndTime"]["Minute"];
+					currentAccount.tickets.push_back(currentEvent);
+				}
+
+				visitorAccounts.push_back(currentAccount);
 			}
 
-			visitorAccounts.push_back(currentAccount);
+			
 		}
-
 		return visitorAccounts;
+		
 	}
 
 	//записує театр у файл
@@ -271,53 +284,59 @@ public:
 		const string fileName = "theatreBase.json";
 
 		json jTheatres;
-
+		vector<Theatre> theatres;
 		ifstream reader;
 		reader.open(fileName);
-		reader >> jTheatres;
-		reader.close();
-
-		vector<Theatre> theatres;
-
-		int iter = 0;
-
-		for (auto i = jTheatres.begin(); i != jTheatres.end(); ++i, ++iter)
+		if (reader)
 		{
-			Theatre currentTheatre;
-			currentTheatre.theatreName = jTheatres[iter]["TheatreName"];
-			currentTheatre.adress.number = jTheatres[iter]["Adress"]["Number"];
-			currentTheatre.adress.street = jTheatres[iter]["Adress"]["Street"];
-			currentTheatre.adress.city = jTheatres[iter]["Adress"]["City"];
+			reader >> jTheatres;
+			reader.close();
 
-			json jEvents = jTheatres[iter]["Events"];
+			
 
+			int iter = 0;
 
-			int iter2 = 0;
-			for (auto j = jEvents.begin(); j != jEvents.end(); ++j, ++iter2)
+			for (auto i = jTheatres.begin(); i != jTheatres.end(); ++i, ++iter)
 			{
-				Event currentEvent;
+				Theatre currentTheatre;
+				currentTheatre.theatreName = jTheatres[iter]["TheatreName"];
+				currentTheatre.adress.number = jTheatres[iter]["Adress"]["Number"];
+				currentTheatre.adress.street = jTheatres[iter]["Adress"]["Street"];
+				currentTheatre.adress.city = jTheatres[iter]["Adress"]["City"];
 
-				currentEvent.eventName = jEvents[iter2]["EventName"];
-				currentEvent.theatreName = jEvents[iter2]["TheatreName"];
-
-				currentEvent.date.day = jEvents[iter2]["Date"]["Day"];
-				currentEvent.date.month = jEvents[iter2]["Date"]["Month"];
-				currentEvent.date.year = jEvents[iter2]["Date"]["Year"];
-
-				currentEvent.startTime.hour = jEvents[iter2]["StartTime"]["Hour"];
-				currentEvent.startTime.minute = jEvents[iter2]["StartTime"]["Minute"];
+				json jEvents = jTheatres[iter]["Events"];
 
 
-				currentEvent.endTime.hour = jEvents[iter2]["EndTime"]["Hour"];
-				currentEvent.endTime.minute = jEvents[iter2]["EndTime"]["Minute"];
+				int iter2 = 0;
+				for (auto j = jEvents.begin(); j != jEvents.end(); ++j, ++iter2)
+				{
+					Event currentEvent;
 
-				currentTheatre.events.push_back(currentEvent);
+					currentEvent.eventName = jEvents[iter2]["EventName"];
+					currentEvent.theatreName = jEvents[iter2]["TheatreName"];
+
+					currentEvent.date.day = jEvents[iter2]["Date"]["Day"];
+					currentEvent.date.month = jEvents[iter2]["Date"]["Month"];
+					currentEvent.date.year = jEvents[iter2]["Date"]["Year"];
+
+					currentEvent.startTime.hour = jEvents[iter2]["StartTime"]["Hour"];
+					currentEvent.startTime.minute = jEvents[iter2]["StartTime"]["Minute"];
+
+
+					currentEvent.endTime.hour = jEvents[iter2]["EndTime"]["Hour"];
+					currentEvent.endTime.minute = jEvents[iter2]["EndTime"]["Minute"];
+
+					currentTheatre.events.push_back(currentEvent);
+				}
+
+				theatres.push_back(currentTheatre);
 			}
 
-			theatres.push_back(currentTheatre);
+			return theatres;
 		}
-
+		
 		return theatres;
+
 	}
 
 	//додає подію до театру
@@ -354,6 +373,25 @@ public:
 
 		rewriteTheatreBase(theatres);
 		rewriteVisitorAccountsBase(visitors);
+	}
+
+	//видаляє квиток у відвідувача
+	void removeEventFromVisitor(int eventIndex, Visitor visitor)
+	{
+		vector<Visitor> visitors = GetVisitorAccountsVector();
+
+		for (int i = 0; i < visitors.size(); i++)
+		{
+			if (visitors[i].login == visitor.login)
+			{
+				visitors[i].tickets.erase(visitors[i].tickets.begin() + eventIndex);
+				break;
+			}
+		}
+		
+		rewriteVisitorAccountsBase(visitors);
+
+
 	}
 	//додає квиток до відвідувача
 	void addEventToVisitor(std::string login, Event _event)
