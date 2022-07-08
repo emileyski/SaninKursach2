@@ -24,7 +24,13 @@ public struct Time
 		a += (minute < 10) ? "0" + converter.str() : converter.str();
 		return a;
 	}
-
+	bool operator ==(const Time& other) {
+		if (this->hour == other.hour && this->minute == other.minute) {
+			return true;
+		}
+		else
+			return false;
+	}
 };
 
 public struct Date
@@ -50,6 +56,15 @@ public struct Date
 		a += converter.str();
 		return a;
 	}
+	bool operator ==(const Date& other) {
+		if (this->day == other.day && this->month == other.month&& this->year == other.year) {
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 };
 
 public class Event
@@ -70,7 +85,20 @@ public:
 		this->startTime = startTime;
 		this->endTime = endTime;
 	};
-	~Event(){};
+	bool operator ==(const Event& other) {
+		if (this->theatreName == other.theatreName &&
+			this->eventName == other.eventName &&
+			this->date == other.date &&
+			this->startTime == other.startTime &&
+			this->endTime == other.endTime) 
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 
 
 };

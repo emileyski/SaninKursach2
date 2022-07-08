@@ -353,7 +353,7 @@ public:
 		currentTheatreEvents->erase(currentTheatreEvents->begin() + eventIndex);
 
 		rewriteTheatreBase(theatres);
-
+		rewriteVisitorAccountsBase(visitors);
 	}
 	//додає квиток до відвідувача
 	void addEventToVisitor(std::string login, Event _event)
