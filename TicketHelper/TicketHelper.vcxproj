@@ -125,6 +125,7 @@
     <ClCompile Include="AdminRoomForm.cpp" />
     <ClCompile Include="AllEventViewerForm.cpp" />
     <ClCompile Include="EditTheatreForm.cpp" />
+    <ClCompile Include="InfoForm.cpp" />
     <ClCompile Include="RegAuthForm.cpp" />
     <ClCompile Include="VisitorRoomForm.cpp" />
   </ItemGroup>
@@ -141,6 +142,9 @@
     </ClInclude>
     <ClInclude Include="Event.h" />
     <ClInclude Include="FindController.h" />
+    <ClInclude Include="InfoForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="RegAuthForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -160,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditTheatreForm.resx">
       <DependentUpon>EditTheatreForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoForm.resx">
+      <DependentUpon>InfoForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegAuthForm.resx">
       <DependentUpon>RegAuthForm.h</DependentUpon>

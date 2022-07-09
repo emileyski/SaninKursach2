@@ -1,6 +1,7 @@
   TicketHelper.AdminRoomForm.resources - Embedded, ContainedInManifestFile, 
   TicketHelper.AllEventViewerForm.resources - Embedded, ContainedInManifestFile, 
   TicketHelper.EditTheatreForm.resources - Embedded, ContainedInManifestFile, 
+  TicketHelper.InfoForm.resources - Embedded, ContainedInManifestFile, 
   TicketHelper.RegAuthForm.resources - Embedded, ContainedInManifestFile, 
   TicketHelper.VisitorRoomForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
@@ -53,6 +54,9 @@ Class TicketHelper.AllEventViewerForm: AutoLayout, AnsiClass, Class, Public, Bef
   :System.Windows.Forms.Form
     Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class TicketHelper.EditTheatreForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class TicketHelper.InfoForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class TicketHelper.AdminRoomForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
