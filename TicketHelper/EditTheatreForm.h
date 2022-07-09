@@ -74,6 +74,7 @@ namespace TicketHelper {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(EditTheatreForm::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->btnGoBack = (gcnew System::Windows::Forms::Button());
 			this->btnExit = (gcnew System::Windows::Forms::Button());
@@ -265,6 +266,7 @@ namespace TicketHelper {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->panel1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"EditTheatreForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"EditTheatreForm";
