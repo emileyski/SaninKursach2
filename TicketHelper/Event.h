@@ -85,6 +85,23 @@ public:
 		this->startTime = startTime;
 		this->endTime = endTime;
 	};
+
+	int returnDuration() {
+		if (startTime.hour == endTime.hour && startTime.minute == endTime.minute) {
+			return 0;
+		}
+		else if (startTime.hour > endTime.hour || startTime.minute > endTime.minute) {
+			int minutes = ((24 * 60) + (endTime.hour * 60) + endTime.minute) - ((startTime.hour * 60) + startTime.minute);
+			return minutes;
+		}
+		else
+		{
+			int minutes = ((endTime.hour * 60) + endTime.minute) - ((startTime.hour * 60) + startTime.minute);
+			return minutes;
+		}
+
+		//return minutes;
+	}
 	bool operator ==(const Event& other) {
 		if (this->theatreName == other.theatreName &&
 			this->eventName == other.eventName &&
